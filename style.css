@@ -22,9 +22,8 @@ body{
 .calculator-gird > button {
 	cursor: pointer;
 	font-size: 2rem;
-	border: 1px solid white;
+	border: 1px solid black;
 	outline: none;
-	color: rgba(176, 35, 5, .75);
 	background-color: rgba(176, 35, 5, .75);
 }
 
