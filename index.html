@@ -15,29 +15,30 @@
   <body>
     <h1 class="text-center">JS Calculator</h1>
     <div class="calculator-grid">
-    	<div class="output" id="display">
-    		<div data-previous-operand class="previous-operand">123</div>
-    		<div data-current-operand class="current-operand">456</div>
+    	<div class="output" >
+    		
+    		<div data-previous-operand class="previous-operand" id="display2"></div>
+    		<div data-current-operand class="current-operand" id="display"></div>
     	</div>
    
-    	<button data-all-clear id=""class="span-two">AC</button>
-    	<button data-clear id="clear">C</button>
-    	<button data-operation id="divide">/</button>
-    	<button data-number id="one">1</button>
-		<button data-number id="two">2</button>
-		<button data-number id="three">3</button>
-		<button data-operation id="multiply">*</button>
-		<button data-number id="four">4</button>
-		<button data-number id="five">5</button>
-		<button data-number id="six">6</button>
-		<button data-operation id="subtract">-</button>
-		<button data-number id="seven">7</button>
-		<button data-number id="eight">8</button>
-		<button data-number id="nine">9</button>
-		<button data-operation id="add">+</button>		
-		<button data-number id="zero">0</button>
-		<button data-number id="decimal">.</button>
-		<button data-equals id="equals" class="span-two">=</button>
+    	
+    	<button data-clear id="clear" class="span-three" onclick="clearDisplay('0')">C</button>
+    	<button data-operation id="divide" onclick="updateDisplay('divide')">%</button>
+    	<button data-number id="one" onclick="updateDisplay(1)">1</button>
+		<button data-number id="two" onclick="updateDisplay(2)">2</button>
+		<button data-number id="three" onclick="updateDisplay(3)">3</button>
+		<button data-operation id="multiply"onclick="updateDisplay('multiply')" >*</button>
+		<button data-number id="four" onclick="updateDisplay(4)">4</button>
+		<button data-number id="five" onclick="updateDisplay(5)">5</button>
+		<button data-number id="six" onclick="updateDisplay(6)">6</button>
+		<button data-operation id="subtract" onclick="updateDisplay('subtract')">-</button>
+		<button data-number id="seven" onclick="updateDisplay(7)">7</button>
+		<button data-number id="eight" onclick="updateDisplay(8)">8</button>
+		<button data-number id="nine" onclick="updateDisplay(9)">9</button>
+		<button data-operation id="add" onclick="updateDisplay('add')">+</button>		
+		<button data-number id="zero" onclick="updateDisplay(0)">0</button>
+		<button data-number id="decimal" onclick="updateDisplay(.)">.</button>
+		<button data-equals id="equals" class="span-two" onclick="updateDisplay('equals')">=</button>
 	</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
