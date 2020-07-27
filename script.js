@@ -6,6 +6,7 @@ let workingOperation = ""
 //updates display with required numbers or symbols
 function updateDisplay(input) {
 	let display = document.getElementById('display');
+	let secondaryDisplay = document.getElementById('secondaryDisplay');
 
 		if (display.innerHTML === '0' && operationOptions.indexOf(input) === -1) {
 			display.innerHTML = input;
@@ -16,11 +17,13 @@ function updateDisplay(input) {
 					workingOperation = input;
 					trailingResult = display.innerHTML;
 					display.innerHTML = 0;
+					secondaryDisplay.innerHTML = trailingResult;
 				} else {
-					workingOperation = input;
+					console.log('else');
 					trailingResult = calculate(trailingResult, display.innerHTML, workingOperation);
-					display.innerHTML = trailingResult;
-
+					secondaryDisplay.innerHTML = trailingResult;
+					display.innerHTML = 0;
+					workingOperation = input;
 				}
 
 				
@@ -28,11 +31,12 @@ function updateDisplay(input) {
 				// console.log(trailingResult + ' tr, ' + display.innerHTML + ' dis')
 				display.innerHTML = calculate(trailingResult, display.innerHTML, workingOperation);	
 				trailingResult = display.innerHTML;
+				workingOperation = input;
 			} else {
 
 			display.innerHTML += input;
 			}
-console.log('trailingResult = ' + trailingResult + ', displayHTML = '+ display.innerHTML + ', workingOperation = ' + workingOperation );			
+console.log('trailingResult = ' + trailingResult + ', display = '+ display.innerHTML + ', workingOperation = ' + workingOperation );			
 	}
 
 // clears display and sets to Zero
